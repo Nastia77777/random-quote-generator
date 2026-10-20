@@ -175,4 +175,43 @@ telegramBtn.addEventListener("click", () => {
 });
 
 quoteBtn.addEventListener("click", randomQuote);
-quoteBtn.addEventListener("click", randomQuote);
+
+
+const API_URL = 'http://localhost:5000/api/quotes';
+const historyList = document.getElementById('history-list');
+
+async function loadHistory() {
+  try {
+    const res = await fetch(API_URL);
+    const history = await res.json();
+    
+    historyList.innerHTML = ''; 
+    
+    history.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `"${item.text}" <strong>— ${item.author}</strong>`;
+      historyList.appendChild(li);
+    });
+  } catch (error) {
+    console.log('Error loading history:', error);
+  }
+}
+
+const originalShowQuote = showQuote;
+
+showQuote = function(quoteData) {
+  originalShowQuote(quoteData); 
+  
+  fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+      text: quoteData.content, 
+      author: quoteData.author 
+    })
+  })
+  .then(() => loadHistory()) 
+  .catch(err => console.log('Error saving quote:', err));
+};
+
+loadHistory();

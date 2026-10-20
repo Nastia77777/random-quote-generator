@@ -13,6 +13,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background: #F48FB1;
+  padding: 40px 20px;
 }
 .wrapper {
   width: 605px;
@@ -109,8 +110,131 @@ ul .speech.active {
   padding: 13px 22px;
   border-radius: 30px;
   background: #F48FB1;
+  transition: opacity 0.2s ease;
+}
+.buttons button:hover {
+  opacity: 0.85;
 }
 .buttons button.loading {
   opacity: 0.7;
   pointer-events: none;
+}
+
+.history {
+  margin-top: 28px;
+  border-top: 2px solid #FCE4EC;
+  padding-top: 20px;
+}
+
+.history h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #F48FB1;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.history h3 i {
+  font-size: 13px;
+}
+
+#history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+#history-list::-webkit-scrollbar {
+  width: 4px;
+}
+#history-list::-webkit-scrollbar-track {
+  background: #FCE4EC;
+  border-radius: 10px;
+}
+#history-list::-webkit-scrollbar-thumb {
+  background: #F48FB1;
+  border-radius: 10px;
+}
+
+#history-list li {
+  background: #FFF0F5;
+  border: 1.5px solid #F8BBD9;
+  border-left: 4px solid #F48FB1;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 13.5px;
+  color: #444;
+  line-height: 1.55;
+  transition: background 0.2s ease;
+}
+
+#history-list li:hover {
+  background: #FCE4EC;
+}
+
+#history-list li strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #F48FB1;
+  font-style: italic;
+  font-weight: 600;
+}
+
+
+.history h3 i {
+  font-size: 13px;
+}
+
+#history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+#history-list::-webkit-scrollbar {
+  width: 4px;
+}
+#history-list::-webkit-scrollbar-track {
+  background: #FCE4EC;
+  border-radius: 10px;
+}
+#history-list::-webkit-scrollbar-thumb {
+  background: #F48FB1;
+  border-radius: 10px;
+}
+
+#history-list li {
+  background: #FFF0F5;
+  border: 1.5px solid #F8BBD9;
+  border-left: 4px solid #F48FB1;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 13.5px;
+  color: #444;
+  line-height: 1.55;
+  transition: background 0.2s ease;
+}
+
+#history-list li:hover {
+  background: #FCE4EC;
+}
+
+#history-list li strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #F48FB1;
+  font-style: italic;
+  font-weight: 600;
 }
