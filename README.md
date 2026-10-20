@@ -1,22 +1,13 @@
-# Task Manager (MERN Stack)
+# Random Quote Generator
 
-A full-stack Task Manager application built with the MERN stack (MongoDB, Express, React, Node.js).
+A simple, elegant, and responsive web application that generates random quotes. Built purely with frontend technologies, it fetches data from a public API to display inspiring quotes at the click of a button.
 
-## 🚧 Project Status
-Currently in development. 
+## Technologies Used
 
-## ✨ Planned Features
-- User registration and login (JWT Authentication)
-- Create, read, update, and delete tasks (CRUD)
-- Task statuses: To Do, In Progress, Done
-- Responsive UI for mobile and desktop
-- Protected routes for authorized users
+* **HTML5** - For the semantic structure of the application.
+* **CSS3** - For styling, animations, and responsive design.
+* **Vanilla JavaScript** - For the application logic, DOM manipulation, and handling asynchronous requests.
 
-## 🛠️ Tech Stack
-- **Frontend:** React, React Router, Axios, CSS
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB (MongoDB Atlas)
-- **Auth:** JSON Web Tokens (JWT), bcrypt
+## Demo
 
-## 🚀 How to run (Coming Soon)
-Instructions will be added after the initial setup is complete.
+[Посилання на GitHub Pages](https://nastia77777.github.io/random-quote-generator/)
